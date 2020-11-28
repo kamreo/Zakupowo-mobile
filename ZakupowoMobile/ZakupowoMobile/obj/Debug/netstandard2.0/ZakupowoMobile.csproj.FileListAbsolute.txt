@@ -18,3 +18,5 @@ C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile\obj\Deb
 C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\ref\ZakupowoMobile.dll
 C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\ZakupowoMobile.pdb
 C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\HomePage.xaml.g.cs
+C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\CustomMasterPage.xaml.g.cs
+C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\RegistrationPage.xaml.g.cs

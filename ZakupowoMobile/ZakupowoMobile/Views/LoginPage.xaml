@@ -10,7 +10,7 @@
     <ContentPage.Content >
         <Grid BackgroundColor="White"  >
 
-            <Grid RowSpacing="20"  Margin="20,100,20,0" >
+            <Grid RowSpacing="20" Grid.Row="0" Margin="20,100,20,0" >
                 <Grid.RowDefinitions >
 
                     <RowDefinition Height="60"/>
@@ -21,13 +21,15 @@
 
                 </Grid.RowDefinitions>
                 <Image Source="shopLogo.png" HeightRequest="60"/>
-                <Entry Grid.Row="1" Placeholder="Adres email" PlaceholderColor="#bababa" FontSize="16"/>
-                <Entry Grid.Row="2" Placeholder="Hasło" PlaceholderColor="#bababa" FontSize="16"/>
-                <Button Text="Zaloguj się" x:Name ="signIn" BackgroundColor="#FFB24A"  CornerRadius="5" HeightRequest="50" VerticalOptions="Start" Grid.Row="3"  Command="{Binding LoginCommand}"/>
-                <Button  x:Name ="signUp"  HeightRequest="50" TextColor="White" BackgroundColor="#002447" CornerRadius="5"  Grid.Row="4"  VerticalOptions="Start"  Text="Zarejestruj się" ></Button>
-
+                <Entry Grid.Row="1" Placeholder="Adres email" x:Name ="emailEntry" Text="{Binding Email}" PlaceholderColor="#bababa" FontSize="16"/>
+                <Entry Grid.Row="2" Placeholder="Hasło" x:Name ="passwordEntry" Text="{Binding Password}" IsPassword="True" PlaceholderColor="#bababa" FontSize="16"/>
+                <Button Text="Zaloguj się" x:Name ="signIn" BackgroundColor="#FFB24A"  CornerRadius="5"  VerticalOptions="Start" Grid.Row="3"  Clicked="signIn_Clicked"/>
+                <Label  Grid.Row="4" Text="Nie masz konta? Zarejestruj się."   VerticalOptions="Center" HorizontalTextAlignment="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding RegisterCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
             </Grid>
-
 
         </Grid>
     </ContentPage.Content>

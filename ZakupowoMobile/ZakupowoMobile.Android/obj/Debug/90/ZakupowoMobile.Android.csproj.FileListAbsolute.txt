@@ -494,3 +494,17 @@ C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.Android
 C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\res\drawable\shoplogo.png
+C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\android\assets\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\android\assets\Microsoft.AspNetCore.Http.dll
+C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\android\assets\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\android\assets\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\android\assets\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\android\assets\Microsoft.Extensions.ObjectPool.dll
+C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\android\assets\Microsoft.Extensions.Options.dll
+C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\android\assets\Microsoft.Extensions.Primitives.dll
+C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\android\assets\Microsoft.Net.Http.Headers.dll
+C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\android\assets\System.Buffers.dll
+C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\android\assets\System.Memory.dll
+C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\android\assets\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\android\assets\System.Text.Encodings.Web.dll
+C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll

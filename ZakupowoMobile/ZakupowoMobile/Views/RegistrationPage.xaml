@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZakupowoMobile.Views.RegistrationPage">
+    <ContentPage.Content>
+        <!--<StackLayout VerticalOptions="CenterAndExpand" Padding="20">
+            <Image Source="shopLogo.png" HeightRequest="60"/>
+            <Entry Placeholder="Login" FontSize="16"></Entry>
+            <Entry Placeholder="Email" FontSize="16"></Entry>
+            <Entry Placeholder="Hasło" FontSize="16" IsPassword="True"></Entry>
+            <Entry Placeholder="Potwierdź hasło" FontSize="16" IsPassword="True"></Entry>
+            <Entry Placeholder="Imię" FontSize="16"></Entry>
+            <Entry Placeholder="Nazwisko" FontSize="16"></Entry>
+            <Label Text="Data urodzenia" ></Label>
+            <DatePicker></DatePicker>
+       
+
+
+            <Button  x:Name ="signUp"  HeightRequest="50" TextColor="White"   BackgroundColor="#FFB24A"  CornerRadius="5"  Grid.Row="4"  VerticalOptions="Start"  Text="Zarejestruj się" ></Button>
+            <StackLayout Margin="0,90,0,0"  BackgroundColor="#002447">
+                <Label Text="Nie masz jeszcze konta? Zarejestruj się"  TextColor="White" VerticalOptions="Center" HorizontalTextAlignment="Center"></Label>
+
+            </StackLayout>
+        </StackLayout>-->
+        <Grid BackgroundColor="White"  >
+
+            <Grid RowSpacing="5"  Margin="20,10,20,0" >
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                
+                <Image  Grid.Row="0" Source="shopLogo.png" />
+                <Entry x:Name ="loginEntry"  Grid.Row="1" Placeholder="Login" FontSize="16"></Entry>
+                <Entry x:Name ="emailEntry" Grid.Row="2" Placeholder="Email" FontSize="16"></Entry>
+                <Entry x:Name ="passwordEntry" Grid.Row="3" Placeholder="Hasło" FontSize="16" IsPassword="True"></Entry>
+                <Entry x:Name ="passwordRepeatEntry" Grid.Row="4" Placeholder="Potwierdź hasło" FontSize="16" IsPassword="True"></Entry>
+                <Entry x:Name ="firstNameEntry" Grid.Row="5" Placeholder="Imię" FontSize="16"></Entry>
+                <Entry x:Name ="lastNameEntry" Grid.Row="6" Placeholder="Nazwisko" FontSize="16"></Entry>
+                <Label  Grid.Row="7" Text="Data urodzenia" ></Label>
+                <DatePicker x:Name ="dateEntry" Grid.Row="8"></DatePicker>
+                <Button  x:Name ="signUp"  HeightRequest="50" TextColor="White" Clicked="signUp_Clicked"  BackgroundColor="#FFB24A"  CornerRadius="5"  Grid.Row="9"  VerticalOptions="Start"  Text="Zarejestruj się" ></Button>
+                <Frame x:Name="errorContent" CornerRadius="5"  Grid.Row="10" BackgroundColor="Red"  IsVisible="false" Padding="0">
+                    <Label Text="" x:Name="errorMsg"  TextColor="White" VerticalOptions="Center" HorizontalTextAlignment="Center"></Label>
+                </Frame>
+              
+                <Label Grid.Row="11" Text="Masz już konto? Zaloguj się"   VerticalOptions="Center" HorizontalTextAlignment="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding LoginCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+
+
+
+            </Grid>
+      
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
