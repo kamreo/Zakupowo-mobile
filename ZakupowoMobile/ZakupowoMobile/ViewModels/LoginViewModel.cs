@@ -18,7 +18,7 @@ namespace ZakupowoMobile.ViewModels
 
         private async void Register(object obj)
         {
-            // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
+            
             await App.Current.MainPage.Navigation.PushAsync(new RegistrationPage());
          
 

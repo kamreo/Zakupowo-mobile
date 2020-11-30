@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,23 +43,26 @@ namespace ZakupowoMobile.Views
                     string date = dateEntry.Date.ToString("yyyy/MM/dd");
                     bool response = await Service.RegisterUserAsync(loginEntry.Text, emailEntry.Text, passwordEntry.Text,firstNameEntry.Text, lastNameEntry.Text, date);
 
-                    errorContent.IsVisible = true;
-                    errorMsg.Text = response.ToString();
+                     
                     
                     if (response)
                     {
                         errorContent.IsVisible = true;
                         errorMsg.Text = "Zostałeś zarejestrowany!";
+                        errorMsg.Background = Brush.Green;
                     }
                     else
                     {
+                        errorMsg.Background = Brush.Red;
                         errorContent.IsVisible = true;
                         errorMsg.Text = "Uzytkownik o takim samym emailu lub loginie już istnieje!";
                     }
-                }catch(Exception ex)
+                }catch(AggregateException err)
                 {
-                    errorContent.IsVisible = true;
-                    errorMsg.Text = ex.Message;
+                    foreach (var errInner in err.InnerExceptions)
+                    {
+                        Debug.WriteLine(errInner); //this will call ToString() on the inner execption and get you message, stacktrace and you could perhaps drill down further into the inner exception of it if necessary 
+                    };
                 }
             }
 

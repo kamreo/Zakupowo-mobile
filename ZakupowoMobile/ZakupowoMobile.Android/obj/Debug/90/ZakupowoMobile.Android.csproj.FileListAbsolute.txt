@@ -508,3 +508,4 @@ C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.Android
 C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\android\assets\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\android\assets\System.Text.Encodings.Web.dll
 C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
+C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\res\xml\network_security_config.xml

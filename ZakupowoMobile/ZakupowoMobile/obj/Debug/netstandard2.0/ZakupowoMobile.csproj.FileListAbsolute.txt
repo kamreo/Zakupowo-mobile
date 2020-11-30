@@ -5,7 +5,6 @@ C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile\bin\Deb
 C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\ZakupowoMobile.csprojAssemblyReference.cache
 C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
-C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
 C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
 C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
 C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
@@ -20,3 +19,4 @@ C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile\obj\Deb
 C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\HomePage.xaml.g.cs
 C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\CustomMasterPage.xaml.g.cs
 C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\RegistrationPage.xaml.g.cs
+C:\Users\Kamil\source\repos\ZakupowoMobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\ListViewData.xaml.g.cs

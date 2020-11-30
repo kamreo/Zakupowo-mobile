@@ -8,17 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("ZakupowoMobile.Views.AboutPage.xaml", "Views/AboutPage.xaml", typeof(global::ZakupowoMobile.Views.AboutPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("ZakupowoMobile.Views.ListViewData.xaml", "Views/ListViewData.xaml", typeof(global::ZakupowoMobile.Views.ListViewData))]
 
 namespace ZakupowoMobile.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\AboutPage.xaml")]
-    public partial class AboutPage : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\ListViewData.xaml")]
+    public partial class ListViewData : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(AboutPage));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(ListViewData));
         }
     }
 }

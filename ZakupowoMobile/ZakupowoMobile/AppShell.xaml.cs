@@ -13,9 +13,10 @@ namespace ZakupowoMobile
             InitializeComponent();
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
-            Routing.RegisterRoute(nameof(AboutPage), typeof(AboutPage));
+           
             Routing.RegisterRoute(nameof(RegistrationPage), typeof(RegistrationPage));
             Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
+            Routing.RegisterRoute(nameof(ListViewData), typeof(ListViewData));
         }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)

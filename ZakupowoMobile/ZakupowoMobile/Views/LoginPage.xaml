@@ -10,21 +10,25 @@
     <ContentPage.Content >
         <Grid BackgroundColor="White"  >
 
-            <Grid RowSpacing="20" Grid.Row="0" Margin="20,100,20,0" >
+            <Grid RowSpacing="5" Grid.Row="0" Margin="20,100,20,0" >
                 <Grid.RowDefinitions >
 
                     <RowDefinition Height="60"/>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="40"/>
+                    <RowDefinition Height="30"/>
                     <RowDefinition Height="40"/>
 
                 </Grid.RowDefinitions>
-                <Image Source="shopLogo.png" HeightRequest="60"/>
-                <Entry Grid.Row="1" Placeholder="Adres email" x:Name ="emailEntry" Text="{Binding Email}" PlaceholderColor="#bababa" FontSize="16"/>
+                <Image Grid.Row="0" Source="shopLogo.png" HeightRequest="60"/>
+                <Entry Grid.Row="1" Placeholder="Login" x:Name ="loginEntry" Text="{Binding Email}" PlaceholderColor="#bababa" FontSize="16"/>
                 <Entry Grid.Row="2" Placeholder="Hasło" x:Name ="passwordEntry" Text="{Binding Password}" IsPassword="True" PlaceholderColor="#bababa" FontSize="16"/>
-                <Button Text="Zaloguj się" x:Name ="signIn" BackgroundColor="#FFB24A"  CornerRadius="5"  VerticalOptions="Start" Grid.Row="3"  Clicked="signIn_Clicked"/>
-                <Label  Grid.Row="4" Text="Nie masz konta? Zarejestruj się."   VerticalOptions="Center" HorizontalTextAlignment="Center">
+                <Button Text="Zaloguj się" x:Name ="signIn" Background="#FFB24A"  CornerRadius="5"  VerticalOptions="Start" Grid.Row="3"  Clicked="signIn_Clicked"/>
+                <Frame x:Name="errorContent" CornerRadius="5"  Grid.Row="4" Background="Red"  IsVisible="false" Padding="0">
+                    <Label Text="" x:Name="errorMsg"  TextColor="White" VerticalOptions="Center" HorizontalTextAlignment="Center"></Label>
+                </Frame>
+                <Label  Grid.Row="5" Text="Nie masz konta? Zarejestruj się."   VerticalOptions="Center" HorizontalTextAlignment="Center">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding RegisterCommand}" />
                     </Label.GestureRecognizers>
