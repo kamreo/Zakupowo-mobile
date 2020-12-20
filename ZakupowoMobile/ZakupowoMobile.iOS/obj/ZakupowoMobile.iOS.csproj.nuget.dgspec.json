@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kamil\\source\\repos\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.iOS\\ZakupowoMobile.iOS.csproj": {}
+    "C:\\Users\\Kamil\\Desktop\\Kod\\Zakupowo-mobile\\ZakupowoMobile\\ZakupowoMobile.iOS\\ZakupowoMobile.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kamil\\source\\repos\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.iOS\\ZakupowoMobile.iOS.csproj": {
+    "C:\\Users\\Kamil\\Desktop\\Kod\\Zakupowo-mobile\\ZakupowoMobile\\ZakupowoMobile.iOS\\ZakupowoMobile.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kamil\\source\\repos\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.iOS\\ZakupowoMobile.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\Kamil\\Desktop\\Kod\\Zakupowo-mobile\\ZakupowoMobile\\ZakupowoMobile.iOS\\ZakupowoMobile.iOS.csproj",
         "projectName": "ZakupowoMobile.iOS",
-        "projectPath": "C:\\Users\\Kamil\\source\\repos\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.iOS\\ZakupowoMobile.iOS.csproj",
+        "projectPath": "C:\\Users\\Kamil\\Desktop\\Kod\\Zakupowo-mobile\\ZakupowoMobile\\ZakupowoMobile.iOS\\ZakupowoMobile.iOS.csproj",
         "packagesPath": "C:\\Users\\Kamil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kamil\\source\\repos\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.iOS\\obj\\",
+        "outputPath": "C:\\Users\\Kamil\\Desktop\\Kod\\Zakupowo-mobile\\ZakupowoMobile\\ZakupowoMobile.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\Kamil\\source\\repos\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.csproj": {
-                "projectPath": "C:\\Users\\Kamil\\source\\repos\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.csproj"
+              "C:\\Users\\Kamil\\Desktop\\Kod\\Zakupowo-mobile\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.csproj": {
+                "projectPath": "C:\\Users\\Kamil\\Desktop\\Kod\\Zakupowo-mobile\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.csproj"
               }
             }
           }
@@ -42,6 +42,10 @@
       "frameworks": {
         "xamarinios10": {
           "dependencies": {
+            "Xam.Plugins.Forms.ImageCircle": {
+              "target": "Package",
+              "version": "[3.0.0.5, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.5.3.2, )"
@@ -65,14 +69,14 @@
         }
       }
     },
-    "C:\\Users\\Kamil\\source\\repos\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.csproj": {
+    "C:\\Users\\Kamil\\Desktop\\Kod\\Zakupowo-mobile\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kamil\\source\\repos\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.csproj",
+        "projectUniqueName": "C:\\Users\\Kamil\\Desktop\\Kod\\Zakupowo-mobile\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.csproj",
         "projectName": "ZakupowoMobile",
-        "projectPath": "C:\\Users\\Kamil\\source\\repos\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.csproj",
+        "projectPath": "C:\\Users\\Kamil\\Desktop\\Kod\\Zakupowo-mobile\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.csproj",
         "packagesPath": "C:\\Users\\Kamil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kamil\\source\\repos\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile\\obj\\",
+        "outputPath": "C:\\Users\\Kamil\\Desktop\\Kod\\Zakupowo-mobile\\ZakupowoMobile\\ZakupowoMobile\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -118,6 +122,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
+            },
+            "Xam.Plugins.Forms.ImageCircle": {
+              "target": "Package",
+              "version": "[3.0.0.5, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

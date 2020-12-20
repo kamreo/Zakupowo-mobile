@@ -4,6 +4,7 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "ZakupowoMobile.Android.dll" comes first in this list. */
 		"ZakupowoMobile.Android.dll",
 		"FormsViewGroup.dll",
+		"ImageCircle.Forms.Plugin.dll",
 		"Microsoft.AspNetCore.Http.Abstractions.dll",
 		"Microsoft.AspNetCore.Http.dll",
 		"Microsoft.AspNetCore.Http.Features.dll",

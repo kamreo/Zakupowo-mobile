@@ -12,6 +12,7 @@
           "Microsoft.AspNetCore.Http": "2.2.2",
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "12.0.3",
+          "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
           "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Forms": "4.8.0.1451"
         },
@@ -189,6 +190,17 @@
           }
         }
       },
+      "Xam.Plugins.Forms.ImageCircle/3.0.0.5": {
+        "dependencies": {
+          "Xamarin.Forms": "4.8.0.1451"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ImageCircle.Forms.Plugin.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Xamarin.Essentials/1.5.3.2": {
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -349,6 +361,13 @@
       "sha512": "sha512-Xg4G4Indi4dqP1iuAiMSwpiWS54ZghzR644OtsRCm/m/lBMG8dUBhLVN7hLm8NNrNTR+iGbshCPTwrvxZPlm4g==",
       "path": "system.text.encodings.web/4.5.0",
       "hashPath": "system.text.encodings.web.4.5.0.nupkg.sha512"
+    },
+    "Xam.Plugins.Forms.ImageCircle/3.0.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-59HyuAaUzuloQmu/PVCDCJQMRuuhqmIpCQ+d5hH5Qp8AZsa/vDi5ulrXDKRMZSZt/xbXsyZV+aZ/W/SZaYt2Mg==",
+      "path": "xam.plugins.forms.imagecircle/3.0.0.5",
+      "hashPath": "xam.plugins.forms.imagecircle.3.0.0.5.nupkg.sha512"
     },
     "Xamarin.Essentials/1.5.3.2": {
       "type": "package",

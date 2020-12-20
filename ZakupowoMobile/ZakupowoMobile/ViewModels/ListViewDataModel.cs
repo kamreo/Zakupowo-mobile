@@ -10,6 +10,7 @@ using System.Text;
 
 using Xamarin.Forms;
 using ZakupowoMobile.Models;
+using ZakupowoMobile.Services;
 
 namespace ZakupowoMobile.ViewModels
 {
@@ -25,7 +26,7 @@ namespace ZakupowoMobile.ViewModels
         {
             using (var client = new HttpClient())
             {
-                var uri = "http://192.168.0.15:45455/api/Categories";
+                var uri = Service.URI +"api/Categories";
                 var result = await client.GetStringAsync(uri);
 
                 var CategoryList = JsonConvert.DeserializeObject<List<Category>>(result);

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kamil\\source\\repos\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.csproj": {}
+    "C:\\Users\\Kamil\\Desktop\\Kod\\Zakupowo-mobile\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kamil\\source\\repos\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.csproj": {
+    "C:\\Users\\Kamil\\Desktop\\Kod\\Zakupowo-mobile\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kamil\\source\\repos\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.csproj",
+        "projectUniqueName": "C:\\Users\\Kamil\\Desktop\\Kod\\Zakupowo-mobile\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.csproj",
         "projectName": "ZakupowoMobile",
-        "projectPath": "C:\\Users\\Kamil\\source\\repos\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.csproj",
+        "projectPath": "C:\\Users\\Kamil\\Desktop\\Kod\\Zakupowo-mobile\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.csproj",
         "packagesPath": "C:\\Users\\Kamil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kamil\\source\\repos\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile\\obj\\",
+        "outputPath": "C:\\Users\\Kamil\\Desktop\\Kod\\Zakupowo-mobile\\ZakupowoMobile\\ZakupowoMobile\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -57,6 +57,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
+            },
+            "Xam.Plugins.Forms.ImageCircle": {
+              "target": "Package",
+              "version": "[3.0.0.5, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

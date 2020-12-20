@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jDxxA74Kk+DNqF1Q2eJ1od3DNOsdlJmBY2v0ZUgVFD5Fyrp0FWShAJL86l7HTqelz238VbADzzmI+rZlEoKZ5w==",
+  "dgSpecHash": "vOTOdgiferEAQ7Xru+8YoAKcfPFTMpsNLhwJV61ahs7pArUa3KYD7L24I1cVJ6qBAbtDXjLJnR6uT8nnvdrXDg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kamil\\source\\repos\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.iOS\\ZakupowoMobile.iOS.csproj",
+  "projectFilePath": "C:\\Users\\Kamil\\Desktop\\Kod\\Zakupowo-mobile\\ZakupowoMobile\\ZakupowoMobile.iOS\\ZakupowoMobile.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kamil\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.2\\microsoft.aspnetcore.http.2.2.2.nupkg.sha512",
     "C:\\Users\\Kamil\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
@@ -19,8 +19,9 @@
     "C:\\Users\\Kamil\\.nuget\\packages\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",
     "C:\\Users\\Kamil\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.1\\system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
     "C:\\Users\\Kamil\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512"
+    "C:\\Users\\Kamil\\.nuget\\packages\\xam.plugins.forms.imagecircle\\3.0.0.5\\xam.plugins.forms.imagecircle.3.0.0.5.nupkg.sha512",
+    "C:\\Users\\Kamil\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\Kamil\\.nuget\\packages\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512"
   ],
   "logs": []
 }

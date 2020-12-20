@@ -6,6 +6,8 @@ namespace ZakupowoMobile.Models
 {
     class LoginBindingModel
     {
+        public static User user;
+
         public string Login
         {
             get; set;

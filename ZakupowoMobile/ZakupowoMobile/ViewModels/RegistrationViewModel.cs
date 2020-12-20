@@ -8,7 +8,7 @@ using ZakupowoMobile.Views;
 
 namespace ZakupowoMobile.ViewModels
 {
-    public class RegistrationViewModel : BaseViewModel
+    public class RegistrationViewModel
     {
       
     

@@ -7,7 +7,7 @@ using ZakupowoMobile.Views;
 
 namespace ZakupowoMobile.ViewModels
 {
-    public class LoginViewModel : BaseViewModel
+    public class LoginViewModel 
     {
         public Command LoginCommand
         {

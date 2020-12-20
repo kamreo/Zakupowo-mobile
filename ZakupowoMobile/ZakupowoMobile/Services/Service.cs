@@ -14,29 +14,33 @@ using ZakupowoMobile.Views;
 
 namespace ZakupowoMobile.Services
 {
+
+    
     class Service
     {
+        public static string URI = "http://192.168.0.103:45455/";
         public static async Task<bool> LoginUserAsync(string login, string password)
         {
             bool Response = false;
-            await Task.Run(() =>
+            await Task.Run(async () =>
             {
                 var client = new HttpClient();
                 var model = new Models.LoginBindingModel
                 {
                     Login = login,
                     Password = password,
-
                 };
 
                 var json = JsonConvert.SerializeObject(model);
                 HttpContent httpContent = new StringContent(json);
                 httpContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-                var response = client.PostAsync("http://192.168.0.15:45455/" + "api/Users/Login", httpContent);
+                var response = client.PostAsync(URI + "api/Users/Login", httpContent);
 
 
                 if (response.Result.IsSuccessStatusCode)
                 {
+                    string json_response =  response.Result.Headers.ToString();
+                    Session.user = new User(response.Id);
                     Response = true;
                 }
 
@@ -66,7 +70,7 @@ namespace ZakupowoMobile.Services
                 var json = JsonConvert.SerializeObject(model);
                 HttpContent httpContent = new StringContent(json);
                 httpContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-                var response = client.PostAsync("http://192.168.0.15:45455/" + "api/Users/Register", httpContent);
+                var response = client.PostAsync(URI + "api/Users/Register", httpContent);
 
 
                 if (response.Result.IsSuccessStatusCode)
