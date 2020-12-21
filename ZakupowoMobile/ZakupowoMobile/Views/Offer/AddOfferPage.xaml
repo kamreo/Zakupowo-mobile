@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZakupowoMobile.Views.Offer.AddOfferPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical">
+               
+
+
+              
+                <Entry  Placeholder="Tytul" x:Name ="titleEntry"  PlaceholderColor="#bababa" FontSize="16"/>
+                <Editor  Placeholder="Opis" x:Name ="descriptionEntry" MaxLength="10" Text="sadasd" PlaceholderColor="#bababa"/>
+                <Picker ItemDisplayBinding="{Binding CategoryName}" Title="Wybierz kategorie" ItemsSource="{Binding Categories}" x:Name="CategoryBinder"></Picker>
+                <Entry  Placeholder="Podaj ilosc" x:Name ="quantityEntry"  PlaceholderColor="#bababa" FontSize="16"/>
+                <Entry  Placeholder="Cena (za sztuke)" x:Name ="priceEntry"  PlaceholderColor="#bababa" FontSize="16"/>
+                <Button Text="Dodaj oferte" x:Name ="signIn" Background="#FFB24A" Clicked="addOffer_Clicked" CornerRadius="5"  VerticalOptions="Start"   />
+                <Image x:Name="resultImage" />
+                <Button Text="Dodaj zdjęcia" Clicked="Button1_Clicked" />
+                <Button Text="Zrób zdjęcie" Clicked="Button2_Clicked" />
+               
+             
+                <CollectionView x:Name="collectionView" HeightRequest="500">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding .}" />
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+              
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

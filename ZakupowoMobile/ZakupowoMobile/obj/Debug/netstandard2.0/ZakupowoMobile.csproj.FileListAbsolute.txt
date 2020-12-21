@@ -38,3 +38,6 @@ C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile\obj\Deb
 C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\BeforeAuth\RegistrationPage.xaml.g.cs
 C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\Categories\ListViewData.xaml.g.cs
 C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\MasterPage\CustomMaster.xaml.g.cs
+C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\Categories\CategoryItemsPage.xaml.g.cs
+C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\Offer\OfferItemPage.xaml.g.cs
+C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\Offer\AddOfferPage.xaml.g.cs

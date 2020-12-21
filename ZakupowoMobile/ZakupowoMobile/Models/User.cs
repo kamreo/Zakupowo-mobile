@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Net.Http;
 using System.Text;
@@ -12,11 +13,18 @@ namespace ZakupowoMobile.Models
     class User
     {
         public User(int ID)
-        {
+        { 
             this.ID = ID;
+            this.Image = GetProfilePictureAsync(ID).Result;
         }
 
         public int ID
+        {
+            get;
+            set;
+        }
+
+        public string Image
         {
             get;
             set;
@@ -28,23 +36,21 @@ namespace ZakupowoMobile.Models
         }
 
 
-        public async Task<string> GetProfilePictureAsync()
+        public async Task<string> GetProfilePictureAsync(int ID)
         {
             var imageUri = "";
             await Task.Run(async () =>
             {
                 using (var client = new HttpClient())
                 {
-                    var uri = Service.URI + "api/Users/Avatar?userID=" + this.ID;
+                    var uri = Service.URI + "api/Users/Avatar?userID=" + ID;
                     var result = await client.GetStringAsync(uri);
-
-                    imageUri = result;
-
+                    imageUri = JsonConvert.DeserializeObject<string>(result);
                 }
 
             });
-            return imageUri;
 
+            return imageUri;
         }
 
 

@@ -34,13 +34,13 @@ namespace ZakupowoMobile.Services
                 var json = JsonConvert.SerializeObject(model);
                 HttpContent httpContent = new StringContent(json);
                 httpContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-                var response = client.PostAsync(URI + "api/Users/Login", httpContent);
+                var response = await client.PostAsync(URI + "api/Users/Login", httpContent);
+                var userID = JsonConvert.DeserializeObject<string>(response.Content.ReadAsStringAsync().Result);
 
-
-                if (response.Result.IsSuccessStatusCode)
+                if (response.IsSuccessStatusCode)
                 {
-                    string json_response =  response.Result.Headers.ToString();
-                    Session.user = new User(response.Id);
+                
+                    Session.user = new User(Convert.ToInt32(userID));
                     Response = true;
                 }
 

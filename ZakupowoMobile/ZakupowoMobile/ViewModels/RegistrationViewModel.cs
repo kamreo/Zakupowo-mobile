@@ -20,10 +20,10 @@ namespace ZakupowoMobile.ViewModels
 
         public ICommand LoginCommand => new Command(Login);
 
-        private async void Login(object obj)
+        private void Login(object obj)
         {
             // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-            await App.Current.MainPage.Navigation.PushAsync(new LoginPage());
+            Application.Current.MainPage = new NavigationPage(new LoginPage());
 
         }
     

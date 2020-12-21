@@ -35,7 +35,6 @@ namespace ZakupowoMobile.ViewModels
                 
             }
 
-
         }
 
         ObservableCollection<Category> _categories;

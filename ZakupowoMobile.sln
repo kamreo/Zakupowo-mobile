@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZakupowoMobile.Android", "Z
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZakupowoMobile.iOS", "ZakupowoMobile\ZakupowoMobile.iOS\ZakupowoMobile.iOS.csproj", "{2EEB50D4-6D57-4108-8F2C-6C5E07D2CF5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZakupowoMobile", "ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.csproj", "{25567493-0D2C-4138-8398-DB57DD25DA95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZakupowoMobile", "ZakupowoMobile\ZakupowoMobile\ZakupowoMobile.csproj", "{25567493-0D2C-4138-8398-DB57DD25DA95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

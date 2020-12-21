@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZakupowoMobile.Views.Offer.OfferItemPage">
+    <ScrollView>
+    <StackLayout>
+        <Label x:Name="Title"  Text="" FontSize = "30" FontAttributes="Bold"></Label>
+        <CarouselView x:Name="MainCarouselView" HeightRequest="100">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding .}"  ></Image>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+    
+        <Label x:Name="Price"  Text=""></Label>
+        <Button Clicked="BuyItemClicked" Text="Kup teraz"> </Button>
+        <Label FontSize = "20" FontAttributes="Bold"  Text="Opis produktu:"></Label>
+      
+        <Label HeightRequest="50" x:Name="Description"  Text=""></Label>
+        
+    </StackLayout>
+    </ScrollView>
+
+
+
+
+</ContentPage>

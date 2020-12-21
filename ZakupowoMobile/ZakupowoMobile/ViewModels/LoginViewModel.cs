@@ -16,11 +16,11 @@ namespace ZakupowoMobile.ViewModels
 
         public ICommand RegisterCommand => new Command(Register);
 
-        private async void Register(object obj)
+        private void Register(object obj)
         {
             
-            await App.Current.MainPage.Navigation.PushAsync(new RegistrationPage());
-         
+            Application.Current.MainPage = new NavigationPage(new RegistrationPage());
+
 
         }
       
