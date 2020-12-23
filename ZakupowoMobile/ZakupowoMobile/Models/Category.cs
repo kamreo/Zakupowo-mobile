@@ -29,9 +29,6 @@ namespace ZakupowoMobile.Models
             set;
         }
 
-      
-
-
 
     }
 }

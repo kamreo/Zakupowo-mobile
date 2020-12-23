@@ -76,13 +76,15 @@ namespace ZakupowoMobile.Views.Offer
 
         private void addOffer_Clicked(object sender, EventArgs e)
         {
-            string title = 
-            string categoryId = ((Category)CategoryBinder.SelectedItem).CategoryID;
-            CrossFileUploader.Current.UploadFileAsync("<URL HERE>", new FilePathItem[]{
-            new FilePathItem("file",path1),
-            new FilePathItem("file",path2),
-            new FilePathItem("file",path3)
-         }, "Upload Tag 1");
+            //string title = titleEntry.Text;
+            //string description = descriptionEntry.Text;
+            //string price = priceEntry.Text;
+            //string categoryId = ((Category)CategoryBinder.SelectedItem).CategoryID;
+            //CrossFileUploader.Current.UploadFileAsync("<URL HERE>", new FilePathItem[]{
+            //new FilePathItem("file",path1),
+            //new FilePathItem("file",path2),
+            //new FilePathItem("file",path3)
+         //}, "Upload Tag 1");
 
         }
     }

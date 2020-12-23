@@ -3,7 +3,10 @@ Com.Android.DeskClock
 Com.ViewPagerIndicator
 FormsViewGroup
 ImageCircle.Forms.Plugin
+ModernHttpClient
+OkHttp
 Plugin.FilePicker
+Plugin.FileUploader
 Plugin.Media
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime
@@ -45,6 +48,3 @@ Xamarin.Android.Support.ViewPager
 Xamarin.Essentials
 Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
-ModernHttpClient
-OkHttp
-Plugin.FileUploader
