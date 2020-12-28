@@ -25,7 +25,7 @@ namespace ZakupowoMobile.Services
             await Task.Run(async () =>
             {
                 var client = new HttpClient();
-                var model = new Models.LoginBindingModel
+                var model = new LoginBindingModel
                 {
                     Login = login,
                     Password = password,
@@ -35,12 +35,12 @@ namespace ZakupowoMobile.Services
                 HttpContent httpContent = new StringContent(json);
                 httpContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
                 var response = await client.PostAsync(URI + "api/Users/Login", httpContent);
-                var userID = JsonConvert.DeserializeObject<string>(response.Content.ReadAsStringAsync().Result);
+                var user = JsonConvert.DeserializeObject<User>(response.Content.ReadAsStringAsync().Result);
 
                 if (response.IsSuccessStatusCode)
                 {
                 
-                    Session.user = new User(Convert.ToInt32(userID));
+                    Session.user = user;
                     Response = true;
                 }
 

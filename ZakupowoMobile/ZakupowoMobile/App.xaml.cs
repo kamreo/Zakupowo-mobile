@@ -13,7 +13,7 @@ namespace ZakupowoMobile
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
+        
 
             MainPage = new NavigationPage( new LoginPage());
             

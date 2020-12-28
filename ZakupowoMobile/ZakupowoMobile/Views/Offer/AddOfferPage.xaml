@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Orientation="Vertical">
-
+                <Label x:Name="output"></Label>
                 <Entry  Placeholder="Tytul" x:Name ="titleEntry"  PlaceholderColor="#bababa" FontSize="16"/>
                 <Editor  Placeholder="Opis" x:Name ="descriptionEntry" MaxLength="10" Text="" PlaceholderColor="#bababa"/>
                 <Picker ItemDisplayBinding="{Binding CategoryName}" Title="Wybierz kategorie" ItemsSource="{Binding Categories}" x:Name="CategoryBinder"></Picker>

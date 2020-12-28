@@ -28,15 +28,19 @@ namespace ZakupowoMobile.ViewModels
             {
                 using (var client = new HttpClient())
                 {
-                    var uri = Service.URI + "api/Offers";
+                    var uri = Service.URI + "api/Offers/"+id;
                     var result = await client.GetStringAsync(uri);
 
                     var OffersList =  JsonConvert.DeserializeObject<List<OfferItem>>(result);
                     List<OfferItem> CategoryOffersList = new List<OfferItem>();
                     foreach (OfferItem offer in OffersList)
                     {
-                        offer.MainImage = offer.OfferPictures[0].PathToFile;
-                        if (offer.CategoryID == id) CategoryOffersList.Add(offer);
+                        if(offer.OfferPictures.Count > 0)
+                        {
+                            offer.MainImage = offer.OfferPictures[0].PathToFile;
+                        }
+                       
+                        CategoryOffersList.Add(offer);
                         
                     }
                     Offers = new ObservableCollection<OfferItem>(CategoryOffersList);

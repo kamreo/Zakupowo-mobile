@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ZakupowoMobile.Models;
+using ZakupowoMobile.Services;
 using ZakupowoMobile.Views;
 using ZakupowoMobile.Views.Offer;
 
@@ -22,7 +23,7 @@ namespace QCSMobile.Views
         {
             InitializeComponent();
 
-            userName.Text = Session.user.GetFullName();
+           
             MenuItems = new List<MenuItems>();
 
             MenuItems.Add(new MenuItems { OptionName = "Produkty" });
@@ -34,8 +35,10 @@ namespace QCSMobile.Views
 
             navigationList.ItemsSource = MenuItems;
             Detail = new NavigationPage(new ListViewData());
-            imgProfilePicture.Source = Session.user.Image;
-            
+            if (Session.user.AvatarImage.PathToFile.Contains("http")) imgProfilePicture.Source = Session.user.AvatarImage.PathToFile;
+            else imgProfilePicture.Source = Service.URI + Session.user.AvatarImage.PathToFile;
+            userName.Text = Session.user.FirstName + Session.user.LastName;
+
         }
 
         private void Item_Tapped(object sender, ItemTappedEventArgs e)

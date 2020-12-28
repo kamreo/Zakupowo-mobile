@@ -17,7 +17,6 @@ namespace ZakupowoMobile.Models
         {
             get; set;
         }
-    
-    
+        
     }
 }

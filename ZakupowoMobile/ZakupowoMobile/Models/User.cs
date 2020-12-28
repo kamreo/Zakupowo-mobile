@@ -12,47 +12,28 @@ namespace ZakupowoMobile.Models
 {
     class User
     {
-        public User(int ID)
-        { 
-            this.ID = ID;
-            this.Image = GetProfilePictureAsync(ID).Result;
-        }
-
-        public int ID
-        {
-            get;
-            set;
-        }
-
-        public string Image
-        {
-            get;
-            set;
-        }
-
-        public string GetFullName()
-        {
-            return "";
-        }
-
-
-        public async Task<string> GetProfilePictureAsync(int ID)
-        {
-            var imageUri = "";
-            await Task.Run(async () =>
-            {
-                using (var client = new HttpClient())
-                {
-                    var uri = Service.URI + "api/Users/Avatar?userID=" + ID;
-                    var result = await client.GetStringAsync(uri);
-                    imageUri = JsonConvert.DeserializeObject<string>(result);
-                }
-
-            });
-
-            return imageUri;
-        }
-
+        public List<object> Auction { get; set; }
+        public AvatarImage AvatarImage { get; set; }
+        public Bucket Bucket { get; set; }
+        public List<object> Bundles { get; set; }
+        public List<object> FavouriteOffer { get; set; }
+        public List<object> Offers { get; set; }
+        public Order Order { get; set; }
+        public List<object> ReceivedMessages { get; set; }
+        public List<object> SentMessages { get; set; }
+        public List<object> ShippingAdresses { get; set; }
+        public List<object> Transactions { get; set; }
+        public int UserID { get; set; }
+        public bool IsActivated { get; set; }
+        public string Email { get; set; }
+        public string Login { get; set; }
+        public string EncryptedPassword { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public object Phone { get; set; }
+        public DateTime BirthDate { get; set; }
+        public DateTime CreationDate { get; set; }
+        public string RowVersion { get; set; }
 
 
     }
