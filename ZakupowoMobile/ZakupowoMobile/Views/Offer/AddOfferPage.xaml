@@ -12,8 +12,8 @@
                 <Entry  Placeholder="Podaj ilosc" x:Name ="quantityEntry"  PlaceholderColor="#bababa" FontSize="16"/>
                 <Entry  Placeholder="Cena (za sztuke)" x:Name ="priceEntry"  PlaceholderColor="#bababa" FontSize="16"/>
                 <Button Text="Dodaj oferte" x:Name ="signIn" Background="#FFB24A" Clicked="addOffer_Clicked" CornerRadius="5"  VerticalOptions="Start"   />
-               
-                <Button Text="Dodaj zdjęcia" Clicked="Button1_Clicked" />
+
+                <Button Text="Dodaj zdjęcia" Command="{Binding addPhotos}" Clicked="Button1_Clicked" />
                 <Button Text="Zrób zdjęcie" Clicked="Button2_Clicked" />
 
                 <Image x:Name="resultImage" />

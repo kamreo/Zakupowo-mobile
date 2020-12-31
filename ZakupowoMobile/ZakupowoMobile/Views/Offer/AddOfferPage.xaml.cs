@@ -22,7 +22,8 @@ namespace ZakupowoMobile.Views.Offer
         public AddOfferPage()
         {
             InitializeComponent();
-            BindingContext = new AddOfferViewModel();
+            AddOfferViewModel viewModel = new AddOfferViewModel();
+            BindingContext = viewModel;
         }
         async void Button_Clicked(System.Object sender, System.EventArgs e)
         {
@@ -46,11 +47,12 @@ namespace ZakupowoMobile.Views.Offer
             var pickResult = await FilePicker.PickMultipleAsync(new PickOptions
             {
                 FileTypes = FilePickerFileType.Images,
-                PickerTitle = "Pick image(s)"
+                PickerTitle = "Wybierz zdjęcia"
             });
 
             if (pickResult != null)
             {
+                AddOfferViewModel.uploadedFiles = (List<FileResult>)pickResult; 
                 var imageList = new List<ImageSource>();
 
                 foreach (var image in pickResult)
@@ -61,6 +63,8 @@ namespace ZakupowoMobile.Views.Offer
                 }
 
                 collectionView.ItemsSource = imageList;
+                
+
             }
         }
         async void Button2_Clicked(System.Object sender, System.EventArgs e)
@@ -83,16 +87,19 @@ namespace ZakupowoMobile.Views.Offer
             int quantity = Convert.ToInt32(quantityEntry.Text);
             string price = priceEntry.Text;
 
-            var offerItem = new Models.BindingModels.OfferBindingModel
+
+
+             var offerItem = new Models.BindingModels.OfferBindingModel
             {
                 Title = title,
                 Description = description,
                 CategoryID = categoryId,
                 InStockOriginaly = quantity,
                 Price = price,
-                UserID = Session.user.UserID
+                UserID = Session.user.UserID,
+                
 
-            };
+             };
 
             if (string.IsNullOrEmpty(titleEntry.Text) || string.IsNullOrEmpty(descriptionEntry.Text))
             {

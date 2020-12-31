@@ -16,7 +16,7 @@ namespace ZakupowoMobile.Services
 {
 
     
-    class Service
+    public class Service
     {
         public static string URI = "http://192.168.0.103:45455/";
         public static async Task<bool> LoginUserAsync(string login, string password)

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Essentials;
 
 namespace ZakupowoMobile.Models.BindingModels
 {
@@ -13,6 +14,8 @@ namespace ZakupowoMobile.Models.BindingModels
         public int UserID { get; set; }
         public int CategoryID { get; set; }
         public double InStockOriginaly { get; set; }
+
+     
 
     }
 }

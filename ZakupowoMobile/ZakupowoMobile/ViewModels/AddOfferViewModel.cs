@@ -3,10 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using ZakupowoMobile.Models;
 using ZakupowoMobile.Models.BindingModels;
 using ZakupowoMobile.Services;
@@ -21,19 +23,32 @@ namespace ZakupowoMobile.ViewModels
         }
 
 
-        public static async Task<OfferItem> AddOfferAsync(Models.BindingModels.OfferBindingModel offer)
+        public static async Task<OfferItem> AddOfferAsync(OfferBindingModel offer)
         {
             OfferItem offerItem = null;
             await Task.Run(async () =>
             {
                 var client = new HttpClient();
-               
+                MultipartFormDataContent content = null;
+                List<FileResult> fileResults = AddOfferViewModel.uploadedFiles;
 
+                if (fileResults != null)
+                {
+                    content = new MultipartFormDataContent("NkdKd9Yk");
+                    content.Headers.ContentType.MediaType = "multipart/form-data";
+                    foreach (FileResult fileResult in fileResults) content.Add(new StreamContent(File.OpenRead(fileResult.FullPath)), fileResult.FileName, fileResult.FileName);
+                }
+
+                content.Headers.ContentType.MediaType = "multipart/form-data";
                 var json = JsonConvert.SerializeObject(offer);
                 HttpContent httpContent = new StringContent(json);
-                httpContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-                var response = await client.PostAsync(Service.URI + "api/Offers/Add", httpContent);
-                
+
+                //httpContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+                //content.Add(httpContent);
+
+                var response = await client.PostAsync(Service.URI + "api/Offers/Add", content);
+
                 if (response.IsSuccessStatusCode)
                 {
                     offerItem = JsonConvert.DeserializeObject<OfferItem>(response.Content.ReadAsStringAsync().Result);
@@ -43,6 +58,8 @@ namespace ZakupowoMobile.ViewModels
             });
             return offerItem;
         }
+
+
         private async void GetCategories()
         {
             using (var client = new HttpClient())
@@ -53,10 +70,10 @@ namespace ZakupowoMobile.ViewModels
                 var CategoryList = JsonConvert.DeserializeObject<List<Category>>(result);
 
                 Categories = new ObservableCollection<Category>(CategoryList);
-
             }
-
         }
+
+        public static List<FileResult> uploadedFiles;
 
         ObservableCollection<Category> _categories;
 
