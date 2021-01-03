@@ -10,8 +10,11 @@ namespace ZakupowoMobile.Models
 {
     public class Category
     {
+        public Category(string categoryID)
+        {
+            CategoryID = categoryID;
+        }
 
-        
         public string CategoryID
         {
             get;

@@ -43,11 +43,11 @@ namespace ZakupowoMobile.ViewModels
                 var json = JsonConvert.SerializeObject(offer);
                 HttpContent httpContent = new StringContent(json);
 
-                //httpContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+                httpContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
 
-                //content.Add(httpContent);
+                content.Add(httpContent);
 
-                var response = await client.PostAsync(Service.URI + "api/Offers/Add", content);
+                var response = await client.PostAsync(Service.URI + "api/Offers/", content);
 
                 if (response.IsSuccessStatusCode)
                 {

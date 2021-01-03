@@ -24,6 +24,11 @@ namespace ZakupowoMobile.Views.Offer
             InitializeComponent();
             AddOfferViewModel viewModel = new AddOfferViewModel();
             BindingContext = viewModel;
+            titleEntry.Text = "blalvlallv";
+            descriptionEntry.Text = "sdasdasdas";
+            CategoryBinder.SelectedItem = new Category("1");
+            quantityEntry.Text = "2";
+            priceEntry.Text = "200";
         }
         async void Button_Clicked(System.Object sender, System.EventArgs e)
         {
