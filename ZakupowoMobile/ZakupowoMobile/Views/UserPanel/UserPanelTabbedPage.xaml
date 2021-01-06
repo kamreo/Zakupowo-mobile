@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:ZakupowoMobile="clr-namespace:ZakupowoMobile.Views.UserPanel" xmlns:ZakupowoMobile1="clr-namespace:QCSMobile.Views"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+           
+            x:Class="ZakupowoMobile.Views.UserPanel.UserPanelTabbedPage">
+  <!--Pages can be added as references or inline-->
+    <ZakupowoMobile:ProfilePage Title="Dane" IconImageSource="man.png"></ZakupowoMobile:ProfilePage>
+    <ZakupowoMobile:ShipmentAddressPage  Title="Adresy"  IconImageSource="shipment.png"></ZakupowoMobile:ShipmentAddressPage>
+    <ZakupowoMobile:PasswordPage Title="Hasło"   IconImageSource="key.png"></ZakupowoMobile:PasswordPage>
+    <ZakupowoMobile:AvatarPage Title="Avatar"   IconImageSource="picture.png"></ZakupowoMobile:AvatarPage>
+  
+</TabbedPage>

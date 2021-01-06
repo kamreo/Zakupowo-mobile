@@ -1059,3 +1059,14 @@ C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile.Android
 C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\android\src\crc644db0af6ef61d292f\CountingRequestBody_CountingSink.java
 C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\android\src\crc646acbd0515738a876\AwaitableOkHttp_OkTaskCallback.java
 C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\android\src\crc646acbd0515738a876\HostnameVerifier.java
+C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\res\drawable\settings.png
+C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\res\drawable\message.png
+C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\res\drawable\bucket.png
+C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\res\drawable\discount.png
+C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\res\drawable\man.png
+C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\res\drawable\logout.png
+C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\res\drawable\key.png
+C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\res\drawable\shipment.png
+C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\res\drawable\picture.png
+C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\res\drawable\product.png
+C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile.Android\obj\Debug\90\res\drawable\plus.png

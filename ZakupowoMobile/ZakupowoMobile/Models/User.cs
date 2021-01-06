@@ -21,7 +21,7 @@ namespace ZakupowoMobile.Models
         public Order Order { get; set; }
         public List<object> ReceivedMessages { get; set; }
         public List<object> SentMessages { get; set; }
-        public List<object> ShippingAdresses { get; set; }
+        public List<ShippingAdress> ShippingAdresses { get; set; }
         public List<object> Transactions { get; set; }
         public int UserID { get; set; }
         public bool IsActivated { get; set; }
@@ -30,7 +30,7 @@ namespace ZakupowoMobile.Models
         public string EncryptedPassword { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public object Phone { get; set; }
+        public string Phone { get; set; }
         public DateTime BirthDate { get; set; }
         public DateTime CreationDate { get; set; }
         public string RowVersion { get; set; }

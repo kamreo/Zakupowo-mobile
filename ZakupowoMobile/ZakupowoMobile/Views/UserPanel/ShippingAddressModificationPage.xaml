@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZakupowoMobile.Views.UserPanel.ShippingAddressModificationPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Państwo"></Label>
+            <Entry x:Name="country" Placeholder=""></Entry>
+            <Label  Text="Miasto"></Label>
+            <Entry  x:Name="city" Placeholder=""></Entry>
+            <Label Text="Ulica"></Label>
+            <Entry x:Name="street" Placeholder=""></Entry>
+            <Label Text="Numer lokalu"></Label>
+            <Entry x:Name="premises" Placeholder=""></Entry>
+            <Label Text="Kod pocztowy"></Label>
+            <Entry x:Name="postalCode" Placeholder=""></Entry>
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+                <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                    <Button Text="Zmień" Clicked="changeData"></Button>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" BackgroundColor="Green" HorizontalOptions="FillAndExpand">
+                    <Button Text="Usuń" BackgroundColor="Red" Clicked="delete"></Button>
+                </StackLayout>
+            </StackLayout>
+          
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

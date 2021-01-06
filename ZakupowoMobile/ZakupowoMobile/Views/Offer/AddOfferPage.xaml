@@ -7,7 +7,7 @@
             <StackLayout Orientation="Vertical">
                 <Label x:Name="output"></Label>
                 <Entry  Placeholder="Tytul" x:Name ="titleEntry"  PlaceholderColor="#bababa" FontSize="16"/>
-                <Editor  Placeholder="Opis" x:Name ="descriptionEntry" MaxLength="10" Text="" PlaceholderColor="#bababa"/>
+                <Editor  Placeholder="Opis" x:Name ="descriptionEntry" MinimumHeightRequest="30" MaxLength="10" Text="" PlaceholderColor="#bababa"/>
                 <Picker ItemDisplayBinding="{Binding CategoryName}" Title="Wybierz kategorie" ItemsSource="{Binding Categories}" x:Name="CategoryBinder"></Picker>
                 <Entry  Placeholder="Podaj ilosc" x:Name ="quantityEntry"  PlaceholderColor="#bababa" FontSize="16"/>
                 <Entry  Placeholder="Cena (za sztuke)" x:Name ="priceEntry"  PlaceholderColor="#bababa" FontSize="16"/>

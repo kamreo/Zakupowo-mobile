@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZakupowoMobile.Views.UserPanel.ProfilePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Imię"></Label>
+            <Entry x:Name="name" Placeholder=""></Entry>
+            <Label  Text="Nazwisko"></Label>
+            <Entry  x:Name="surname" Placeholder=""></Entry>
+            <Label Text="Email"></Label>
+            <Entry x:Name="email" Placeholder=""></Entry>
+            <Label Text="Numer telefonu"></Label>
+            <Entry x:Name="phone" Placeholder=""></Entry>
+            <Button Text="Zmień" Clicked="changeData"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
