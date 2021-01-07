@@ -36,8 +36,6 @@ namespace ZakupowoMobile.Views.UserPanel
             model.AdressID = UserPanelViewModel.currentAddress.AdressID;
 
             bool response = await UserPanelViewModel.ChangeAddressData(model);
-           
-
 
         }
         private async void delete(object sender, EventArgs e)
@@ -46,7 +44,11 @@ namespace ZakupowoMobile.Views.UserPanel
             model.AdressID = UserPanelViewModel.currentAddress.AdressID;
 
             bool response = await UserPanelViewModel.DeleteAddress(model);
-            if (response) await Navigation.PopAsync();
+            if (response)
+            {
+                UserPanelViewModel.currentModel.UpdateAddresses();
+                await Navigation.PopAsync();
+            }
 
         }
     }

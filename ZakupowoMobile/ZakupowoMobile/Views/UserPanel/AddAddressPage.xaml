@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZakupowoMobile.Views.UserPanel.AddAddressPage"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup">
+
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation DurationIn="400"
+                                   DurationOut="300"
+                                   EasingIn="SinOut"
+                                   EasingOut="SinIn"
+                                   HasBackgroundAnimation="True"
+                                   PositionIn="Center"
+                                   PositionOut="Center"
+                                   ScaleIn="1.2"
+                                   ScaleOut="0.8" />
+    </pages:PopupPage.Animation>
+
+    
+    <StackLayout Margin="12"
+                 Padding="24"
+                 BackgroundColor="White"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center">
+        <StackLayout WidthRequest="300">
+            <Label Text="Państwo"></Label>
+            <Entry x:Name="country" Placeholder=""></Entry>
+            <Label  Text="Miasto"></Label>
+            <Entry  x:Name="city" Placeholder=""></Entry>
+            <Label Text="Ulica"></Label>
+            <Entry x:Name="street" Placeholder=""></Entry>
+            <Label Text="Numer lokalu"></Label>
+            <Entry x:Name="premises" Placeholder=""></Entry>
+            <Label Text="Kod pocztowy"></Label>
+            <Entry x:Name="postalCode" Placeholder=""></Entry>
+            <Button Text="Dodaj" Clicked="addAddress"></Button>
+        </StackLayout>
+          
+    </StackLayout>
+
+</pages:PopupPage>

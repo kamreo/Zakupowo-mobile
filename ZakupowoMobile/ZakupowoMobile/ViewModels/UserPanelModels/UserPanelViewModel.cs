@@ -51,6 +51,33 @@ namespace ZakupowoMobile.ViewModels.UserPanelModels
                 return Response;
         }
 
+        public static async Task<bool> AddAddress(ShippingAdress model)
+        {
+            bool Response = false;
+            await Task.Run(async () =>
+            {
+                var client = new HttpClient();
+
+
+                var json = JsonConvert.SerializeObject(model);
+                HttpContent httpContent = new StringContent(json);
+                httpContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+                var response = await client.PostAsync(Service.URI + "api/Users/AddAddress", httpContent); ;
+                var user = JsonConvert.DeserializeObject<User>(response.Content.ReadAsStringAsync().Result);
+
+
+                if (response.IsSuccessStatusCode)
+                {
+
+                    Session.user = user;
+                    Response = true;
+                }
+
+
+            });
+            return Response;
+        }
+
         public static async Task<bool> ChangeAddressData(ShippingAdress model)
         {
             bool Response = false;
@@ -107,8 +134,9 @@ namespace ZakupowoMobile.ViewModels.UserPanelModels
 
 
         public static ShippingAdress currentAddress;
+        public static UserPanelViewModel currentModel;
         ObservableCollection<ShippingAdress> _adresses;
-
+        
         public ObservableCollection<ShippingAdress> Adresses
         {
             get
@@ -122,8 +150,16 @@ namespace ZakupowoMobile.ViewModels.UserPanelModels
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public void UpdateAddresses()
+        {
+            this.Adresses = null;
+            this.Adresses = new ObservableCollection<ShippingAdress>(Session.user.ShippingAdresses);
+            OnPropertyChanged();
 
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

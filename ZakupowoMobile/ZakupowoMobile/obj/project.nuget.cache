@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "V2Hv29vAMHvvXQRzKh0waHhFf+K3uBsfEZ7e4MEhAsecIOZt3JK+Q48jzfRNGgDp79MEOQTSf0mjEH70Fjw7ug==",
+  "dgSpecHash": "o8RqaLYDfAg603e9fuLcgkjI4N5+JeScLWdFszKIUNvMjMHMYB+7VBXma4iC6/CiF23WL6aMeFD/ZHopSTBL/g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Kamil\\Desktop\\Kod\\Zakupowo-mobile\\ZakupowoMobile\\ZakupowoMobile\\ZakupowoMobile.csproj",
   "expectedPackageFiles": [
@@ -17,6 +17,7 @@
     "C:\\Users\\Kamil\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Kamil\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\Kamil\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Kamil\\.nuget\\packages\\rg.plugins.popup\\2.0.0.9\\rg.plugins.popup.2.0.0.9.nupkg.sha512",
     "C:\\Users\\Kamil\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Kamil\\.nuget\\packages\\system.componentmodel.annotations\\4.5.0\\system.componentmodel.annotations.4.5.0.nupkg.sha512",
     "C:\\Users\\Kamil\\.nuget\\packages\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",

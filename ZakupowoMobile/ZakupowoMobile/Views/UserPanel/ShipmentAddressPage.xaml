@@ -1,9 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+         
              x:Class="ZakupowoMobile.Views.UserPanel.ShipmentAddressPage">
     <ContentPage.Content>
         <StackLayout>
+            <StackLayout HeightRequest="30"></StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand" HeightRequest="30" >
+                <ImageButton Clicked="addAddress" HeightRequest="30" BackgroundColor="Transparent" Source="add.png"></ImageButton>
+            </StackLayout>
+
             <ListView ItemsSource="{Binding Adresses}" HasUnevenRows="true" x:Name="listView" ItemTapped="OnItemSelected">
                 <ListView.ItemTemplate   >
                     <DataTemplate>

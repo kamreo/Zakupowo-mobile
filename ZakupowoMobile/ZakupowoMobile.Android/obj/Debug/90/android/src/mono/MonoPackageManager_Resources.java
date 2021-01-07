@@ -25,6 +25,7 @@ public class MonoPackageManager_Resources {
 		"Plugin.FileUploader.Abstractions.dll",
 		"Plugin.FileUploader.dll",
 		"Plugin.Media.dll",
+		"Rg.Plugins.Popup.dll",
 		"System.Text.Encodings.Web.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",

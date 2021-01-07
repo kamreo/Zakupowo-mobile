@@ -7,22 +7,24 @@
         <StackLayout>
           
             <ListView ItemsSource="{Binding Categories}" HasUnevenRows="true" ItemTapped="OnItemSelected">
-                <ListView.ItemTemplate   >
+                <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <Grid Padding="10" >
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="60"></RowDefinition>
-                                    <RowDefinition Height="60"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
-                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="0"></ColumnDefinition>
+                                    <ColumnDefinition Width="50"></ColumnDefinition>
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
                                 <!-- Image takes to rows so rowspan = 2-->
-                              
-                                <Label Grid.Column="1" Grid.Row="1" Text="{Binding CategoryName}" FontAttributes="Bold"></Label>
-                                <Label Grid.Column="1" Grid.Row="1" Text="{Binding CategoryDescripton}"></Label>
+                                <Image Grid.Column="1" Grid.Row="1"  Source="{Binding ImageSource}" ></Image>
+                                <Label Grid.Column="2"></Label>
+                                <Label Grid.Column="3" Grid.Row="1" VerticalOptions="CenterAndExpand" Text="{Binding CategoryName}" FontSize="30" FontAttributes="Bold"></Label>
+                                
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

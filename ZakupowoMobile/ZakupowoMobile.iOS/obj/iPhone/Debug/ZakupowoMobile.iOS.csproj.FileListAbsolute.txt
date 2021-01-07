@@ -77,3 +77,5 @@ C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile.iOS\bin
 C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile.iOS\bin\iPhone\Debug\Plugin.Media.pdb
 C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile.iOS\bin\iPhone\Debug\Plugin.FilePicker.dll
 C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile.iOS\bin\iPhone\Debug\Plugin.FilePicker.pdb
+C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile.iOS\bin\iPhone\Debug\Rg.Plugins.Popup.dll
+C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile.iOS\bin\iPhone\Debug\Rg.Plugins.Popup.pdb

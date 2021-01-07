@@ -8,6 +8,7 @@ OkHttp
 Plugin.FilePicker
 Plugin.FileUploader
 Plugin.Media
+Rg.Plugins.Popup
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime
 Xamarin.Android.Arch.Lifecycle.Common

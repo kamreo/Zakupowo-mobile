@@ -47,3 +47,4 @@ C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile\obj\Deb
 C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\UserPanel\ShipmentAddressPage.xaml.g.cs
 C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\UserPanel\UserPanelTabbedPage.xaml.g.cs
 C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\UserPanel\ShippingAddressModificationPage.xaml.g.cs
+C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\UserPanel\AddAddressPage.xaml.g.cs

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rg.Plugins.Popup.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,9 @@ namespace ZakupowoMobile.Views.UserPanel
 
 
             InitializeComponent();
-            BindingContext = new UserPanelViewModel();
+            UserPanelViewModel model = new UserPanelViewModel();
+            UserPanelViewModel.currentModel = model;
+            BindingContext = model;
             
         }
         private async void OnItemSelected(object sender, ItemTappedEventArgs e)
@@ -39,6 +42,9 @@ namespace ZakupowoMobile.Views.UserPanel
 
         }
 
-
+        private void addAddress(object sender, EventArgs e)
+        {
+            PopupNavigation.Instance.PushAsync(new AddAddressPage());
+        }
     }
 }
