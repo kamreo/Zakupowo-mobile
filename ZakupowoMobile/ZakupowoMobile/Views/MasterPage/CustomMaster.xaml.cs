@@ -72,7 +72,7 @@ namespace QCSMobile.Views
                         break;
                     case "Koszyk":
                         {
-
+                            Detail = new NavigationPage(new BucketPage());
                             IsPresented = false;
 
                         }

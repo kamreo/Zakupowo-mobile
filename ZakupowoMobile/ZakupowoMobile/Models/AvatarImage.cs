@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ZakupowoMobile.Models
 {
-    class AvatarImage
+    public class AvatarImage
     {
         public int AvatarImageID { get; set; }
         public string PathToFile { get; set; }

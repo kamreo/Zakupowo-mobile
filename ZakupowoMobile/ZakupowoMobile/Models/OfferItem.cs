@@ -16,6 +16,7 @@ namespace ZakupowoMobile.Models
         public int OfferID { get; set; }
 
         public string Title { get; set; }
+        public string Login { get; set; }
 
         public string Description { get; set; }
 

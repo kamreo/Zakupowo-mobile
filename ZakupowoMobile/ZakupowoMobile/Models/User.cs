@@ -10,7 +10,7 @@ using ZakupowoMobile.Services;
 
 namespace ZakupowoMobile.Models
 {
-    class User
+    public class User
     {
         public List<object> Auction { get; set; }
         public AvatarImage AvatarImage { get; set; }

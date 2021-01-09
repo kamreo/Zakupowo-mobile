@@ -64,7 +64,6 @@ namespace ZakupowoMobile.Views.Offer
                 }
 
                 collectionView.ItemsSource = imageList;
-                
 
             }
         }

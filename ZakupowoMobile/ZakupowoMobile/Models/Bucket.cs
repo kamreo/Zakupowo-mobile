@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ZakupowoMobile.Models
 {
-    class Bucket
+    public class Bucket
     {
         public List<object> BucketItems { get; set; }
         public int BucketID { get; set; }

@@ -6,8 +6,8 @@
              mc:Ignorable="d"
              x:Class="ZakupowoMobile.Views.LoginPage"
              Shell.NavBarIsVisible="False">
-  
-    <ContentPage.Content >
+    
+    <ContentPage.Content>
         <Grid BackgroundColor="White"  >
 
             <Grid RowSpacing="5" Grid.Row="0" Margin="20,100,20,0" >
@@ -36,5 +36,6 @@
             </Grid>
 
         </Grid>
+        
     </ContentPage.Content>
 </ContentPage>

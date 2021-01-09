@@ -25,11 +25,13 @@ namespace ZakupowoMobile.Views
             this.BindingContext = new LoginViewModel();
             loginEntry.Text = "kamreo";
             passwordEntry.Text = "haslo1223";
+            this.IsBusy = false;
 
         }
 
         private async void signIn_Clicked(object sender, EventArgs e)
         {
+            this.IsBusy = true; 
             if ( string.IsNullOrEmpty(loginEntry.Text) || string.IsNullOrEmpty(passwordEntry.Text) )
             {
                 await DisplayAlert("Enter data", "Enter valid data", "Ok");
@@ -38,17 +40,17 @@ namespace ZakupowoMobile.Views
             {
                 try
                 {
-           
+                  
                     bool response = await Service.LoginUserAsync(loginEntry.Text, passwordEntry.Text);
 
                     if (response)
                     {
-                        
+                     
                         await Navigation.PushModalAsync(new CustomMaster());
                     }
                     else
                     {
-
+                        this.IsBusy = false;
                         errorContent.IsVisible = true;
                         errorMsg.Text = "Podane dane są nieprawidłowe!";
                     }
@@ -62,5 +64,7 @@ namespace ZakupowoMobile.Views
                 }
             }
         }
+
+       
     }
 }
