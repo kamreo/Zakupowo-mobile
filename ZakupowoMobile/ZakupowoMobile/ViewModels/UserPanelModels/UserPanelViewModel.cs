@@ -3,11 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using ZakupowoMobile.Models;
 using ZakupowoMobile.Models.BindingModels;
@@ -23,7 +25,13 @@ namespace ZakupowoMobile.ViewModels.UserPanelModels
 
         }
 
-       
+        public static ShippingAdress currentAddress;
+        public static UserPanelViewModel currentModel;
+        ObservableCollection<ShippingAdress> _adresses;
+        public static FileResult uploadedFile = null;
+
+
+
         public static async Task<bool> ChangePersonalData(PersonalDataBindingModel model)
         {
             bool Response = false;
@@ -131,12 +139,69 @@ namespace ZakupowoMobile.ViewModels.UserPanelModels
             return Response;
         }
 
+        public static async Task<string> ChangePassword(Dictionary<string,string> model)
+        {
+            string Response = String.Empty;
+            await Task.Run(async () =>
+            {
+                var client = new HttpClient();
+
+                var json = JsonConvert.SerializeObject(model);
+                HttpContent httpContent = new StringContent(json);
+                httpContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+                var response = await client.PostAsync(Service.URI + "api/Users/ChangePassword", httpContent); ;
+                Response = JsonConvert.DeserializeObject<string>(response.Content.ReadAsStringAsync().Result);
+
+            });
+            return Response;
+        }
+
+        public static async Task<bool> ChangeAvatar()
+        {
+            bool Response = false;
+            await Task.Run(async () =>
+            {
+                var client = new HttpClient();
+                MultipartFormDataContent content = null;
+                FileResult fileResult = uploadedFile;
+
+                if (fileResult != null)
+                {
+                    content = new MultipartFormDataContent("NkdKd9Yk");
+                    content.Headers.ContentType.MediaType = "multipart/form-data";
+                    content.Add(new StreamContent(File.OpenRead(fileResult.FullPath)), fileResult.FileName, fileResult.FileName);
+                }
+
+                content.Headers.ContentType.MediaType = "multipart/form-data";
+                Dictionary<string, string> data = new Dictionary<string, string>{ { "login", Session.user.Login } };
+                var json = JsonConvert.SerializeObject(data);
+                HttpContent httpContent = new StringContent(json);
+
+                httpContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+                content.Add(httpContent);
+
+                var response = await client.PostAsync(Service.URI + "api/Users/ChangeAvatar", content);
+
+                var user = JsonConvert.DeserializeObject<User>(response.Content.ReadAsStringAsync().Result);
 
 
-        public static ShippingAdress currentAddress;
-        public static UserPanelViewModel currentModel;
-        ObservableCollection<ShippingAdress> _adresses;
-        
+                if (response.IsSuccessStatusCode)
+                {
+
+                    Session.user = user;
+                    Response = true;
+                }
+
+            });
+
+            return Response;
+
+        }
+
+
+
+     
         public ObservableCollection<ShippingAdress> Adresses
         {
             get

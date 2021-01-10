@@ -14,10 +14,9 @@
         </CarouselView>
     
         <Label x:Name="Price"  Text=""></Label>
-        <Button Clicked="BuyItemClicked" Text="Kup teraz"> </Button>
-        <Label FontSize = "20" FontAttributes="Bold"  Text="Opis produktu:"></Label>
-      
-        <Label HeightRequest="50" x:Name="Description"  Text=""></Label>
+        <Button Clicked="BuyItemClicked" Text="Dodaj do koszyka"> </Button>
+            <Label FontSize = "20" FontAttributes="Bold"  Text="Opis produktu:"></Label>
+            <Label HeightRequest="50" x:Name="Description"  Text=""></Label>
         
     </StackLayout>
     </ScrollView>

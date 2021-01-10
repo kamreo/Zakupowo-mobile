@@ -3,10 +3,34 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ZakupowoMobile.Views.UserPanel.AvatarPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to AvatarPage!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+     
+            <StackLayout Margin="12"
+                 Padding="24">
+                <StackLayout>
+                    <Frame BorderColor="Gray"
+                                       CornerRadius="5"
+                                       Padding="8">
+                        <StackLayout >
+                            <StackLayout >
+                                <Image x:Name="resultImage"
+                                Source=""
+                                Aspect="AspectFill"
+                                VerticalOptions="Start"
+                                HorizontalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                       
+                            <Button Text="Dodaj zdjęcie" BackgroundColor="#FFB24A" Clicked="Button_Clicked" />
+                        
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                
+                <Button Clicked="changeAvatar" Text="Zmień avatar"></Button>
+                <Label x:Name="output"></Label>
+            </StackLayout>
+           
+          
+        
     </ContentPage.Content>
 </ContentPage>

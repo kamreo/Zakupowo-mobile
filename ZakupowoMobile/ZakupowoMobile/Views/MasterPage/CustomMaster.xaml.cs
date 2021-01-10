@@ -29,10 +29,12 @@ namespace QCSMobile.Views
 
             MenuItems.Add(new MenuItems { OptionName = "Produkty", Image = "product.png" });
             MenuItems.Add(new MenuItems { OptionName = "Dodaj ofertę", Image = "plus.png" });
+            MenuItems.Add(new MenuItems { OptionName = "Historia zamówień", Image = "logout.png" });
             MenuItems.Add(new MenuItems { OptionName = "Koszyk", Image = "bucket.png" });
             MenuItems.Add(new MenuItems { OptionName = "Wiadomości", Image = "message.png" });
             MenuItems.Add(new MenuItems { OptionName = "Ustawienia", Image = "settings.png" });
             MenuItems.Add(new MenuItems { OptionName = "Wyloguj", Image = "logout.png" });
+         
 
             navigationList.ItemsSource = MenuItems;
             Detail = new NavigationPage(new ListViewData());
@@ -63,6 +65,13 @@ namespace QCSMobile.Views
 
                         }
                         break;
+                    case "Historia zamówień":
+                        {
+                            Detail = new NavigationPage(new OrderHistory());
+                            IsPresented = false;
+                        }
+                        break;
+
                     case "Wiadomości":
                         {
                             

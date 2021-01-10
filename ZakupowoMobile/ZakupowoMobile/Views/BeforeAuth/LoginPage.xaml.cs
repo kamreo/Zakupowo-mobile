@@ -24,7 +24,7 @@ namespace ZakupowoMobile.Views
             NavigationPage.SetHasNavigationBar(this, false);
             this.BindingContext = new LoginViewModel();
             loginEntry.Text = "kamreo";
-            passwordEntry.Text = "haslo1223";
+            passwordEntry.Text = "haslo1234";
             this.IsBusy = false;
 
         }
