@@ -3,24 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ZakupowoMobile.Views.Categories.CategoryItemsPage">
     <ContentPage.Content>
-        <StackLayout>
+       
+        <StackLayout >
+            <Label HeightRequest="15"></Label>
+            <StackLayout VerticalOptions="CenterAndExpand" HeightRequest="30" >
+                <ImageButton Clicked="showFilters" HeightRequest="30" BackgroundColor="Transparent" Source="filter.png"></ImageButton>
+
+            </StackLayout>
+            <Label HeightRequest="15"></Label>
             <ListView ItemsSource="{Binding Offers}" HasUnevenRows="true" ItemTapped="OnItemSelected">
                 <ListView.ItemTemplate >
                     <DataTemplate>
                         <ViewCell>
                             <Grid Padding="10" >
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="60"></RowDefinition>
-                                    <RowDefinition Height="60"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                 
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="100"></ColumnDefinition>
+                                    <ColumnDefinition Width="200"></ColumnDefinition>
                                     <ColumnDefinition Width="Auto"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
                                 <!-- Image takes to rows so rowspan = 2-->
-                                <Image Grid.Column="1" Grid.Row="1" HeightRequest="60" Source="{Binding MainImage}"></Image>
-                                <Label Grid.Column="2" Grid.Row="1" Text="{Binding Title}" FontAttributes="Bold"></Label>
-                                <Label Grid.Column="3" Grid.Row="1" Text="{Binding PriceInfo}"></Label>
+                                <Image Grid.Column="0" Grid.Row="0" HeightRequest="60" Source="{Binding MainImage}"></Image>
+                                <Label Grid.Column="1" Grid.Row="0" FontSize="20" Text="{Binding Title}" FontAttributes="Bold"></Label>
+                                <Label Grid.Column="1" Grid.Row="1" Text="{Binding OfferState}" FontAttributes="Bold"></Label>
+                                <Label Grid.Column="2" Grid.Row="0" Text="{Binding PriceInfo}"></Label>
+                                <Label Grid.Column="2" Grid.Row="1" Text="{Binding StockingInfo}"></Label>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

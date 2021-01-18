@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
+using System.Linq;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -20,6 +21,7 @@ namespace ZakupowoMobile.ViewModels
         public AddOfferViewModel()
         {
             GetCategories();
+            
         }
 
 
@@ -86,6 +88,23 @@ namespace ZakupowoMobile.ViewModels
             set
             {
                 _categories = value;
+                OnPropertyChanged();
+            }
+        }
+
+        
+
+        ObservableCollection<OfferState> _offerStates = new ObservableCollection<OfferState>(Enum.GetValues(typeof(OfferState)).OfType<OfferState>().ToList());
+
+        public ObservableCollection<OfferState> OfferStates
+        {
+            get
+            {
+                return _offerStates;
+            }
+            set
+            {
+                _offerStates = value;
                 OnPropertyChanged();
             }
         }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Linq;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -13,7 +14,7 @@ using ZakupowoMobile.Services;
 
 namespace ZakupowoMobile.ViewModels
 {
-    class CategoryItemsDataModel : INotifyPropertyChanged
+    public class CategoryItemsDataModel : INotifyPropertyChanged
     {
         public CategoryItemsDataModel(int id )
         {
@@ -21,6 +22,7 @@ namespace ZakupowoMobile.ViewModels
             GetCategoryItems(id);
         }
 
+      
         private async void GetCategoryItems(int id)
         {
             
@@ -43,6 +45,8 @@ namespace ZakupowoMobile.ViewModels
                         CategoryOffersList.Add(offer);
                         
                     }
+
+                    allItems = CategoryOffersList;
                     Offers = new ObservableCollection<OfferItem>(CategoryOffersList);
                 }
 
@@ -52,8 +56,32 @@ namespace ZakupowoMobile.ViewModels
 
         }
 
-        ObservableCollection<OfferItem> _offers;
+        public void ApplyFiters(string name, OfferState state, double priceBegin, double priceEnd )
+        {
+            List<OfferItem> filteredList = allItems;
+            Offers = new ObservableCollection<OfferItem>(filteredList);
+            if (name != "" )
+            {
+                filteredList = filteredList.Where(w => w.Title.ToLower().Contains(name.ToLower())).ToList();
+            }
+            if (state!=0)
+            {
+                filteredList = filteredList.Where(w => w.OfferState==state).ToList();
+            }
+            if (priceBegin > 0 || priceEnd<10000 )
+            {
+                filteredList = filteredList.Where(w => w.Price < priceEnd && w.Price > priceBegin).ToList();
+            }
+            Offers = new ObservableCollection<OfferItem>(filteredList);
+        }
 
+        public void DeleteFilters()
+        {
+            Offers = new ObservableCollection<OfferItem>(allItems);
+        }
+
+        ObservableCollection<OfferItem> _offers;
+        public List<OfferItem> allItems; 
         public ObservableCollection<OfferItem> Offers
         {
             get

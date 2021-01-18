@@ -8,9 +8,14 @@ using ZakupowoMobile.Services;
 
 namespace ZakupowoMobile.Models
 {
+    public enum OfferState
+    {
+        Nowy,
+        Używany,
+        Uszkodzony
+    }
     public class OfferItem
     {
-
         public string MainImage { get; set; }
 
         public int OfferID { get; set; }
@@ -28,6 +33,7 @@ namespace ZakupowoMobile.Models
 
         public double InStockOriginaly { get; set; }
 
+        public virtual OfferState OfferState { get; set; }
         public double InStockNow { get; set; }
 
         public double Price { get; set; }
@@ -36,11 +42,16 @@ namespace ZakupowoMobile.Models
 
         public List<OfferPicture> OfferPictures { get; set; }
 
-
         public string PriceInfo 
         {
             get { return "Cena: " + (this.Price).ToString(); }
 
+            set { }
+        }
+
+        public string StockingInfo
+        {
+            get { return "Dostępne: " + (this.InStockNow).ToString(); }
             set { }
         }
 

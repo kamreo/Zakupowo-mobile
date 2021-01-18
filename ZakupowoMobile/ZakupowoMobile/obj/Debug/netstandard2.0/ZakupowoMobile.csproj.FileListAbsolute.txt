@@ -50,3 +50,4 @@ C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile\obj\Deb
 C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\UserPanel\AddAddressPage.xaml.g.cs
 C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\Offer\BucketPage.xaml.g.cs
 C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\Offer\OrderHistory.xaml.g.cs
+C:\Users\Kamil\Desktop\Kod\Zakupowo-mobile\ZakupowoMobile\ZakupowoMobile\obj\Debug\netstandard2.0\Views\Categories\FilterPage.xaml.g.cs

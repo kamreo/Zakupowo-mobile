@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ZakupowoMobile.Models;
 using ZakupowoMobile.ViewModels.OfferModels;
 
 namespace ZakupowoMobile.Views.Offer
@@ -16,7 +17,23 @@ namespace ZakupowoMobile.Views.Offer
         public BucketPage()
         {
             InitializeComponent();
-            BindingContext = new BucketViewModel();
+
+            BucketViewModel model = new BucketViewModel();
+            BindingContext = model;
+            totalPrice.Text = model.TotalBucketPrice;
+         
+        }
+
+        private async void BuyBucketItems(object sender, EventArgs e)
+        {
+            Dictionary<string, string> model = new Dictionary<string, string>()
+            {
+                { "login", Session.user.Login },
+                { "addressId" , (Session.user.ShippingAdresses.First().AdressID).ToString() }
+
+            };
+
+            await BucketViewModel.BuyBucketItems(model);
         }
     }
 }

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ZakupowoMobile.Views.UserPanel.AvatarPage">
     <ContentPage.Content>
-     
+        <ScrollView>
             <StackLayout Margin="12"
                  Padding="24">
                 <StackLayout>
@@ -29,8 +29,8 @@
                 <Button Clicked="changeAvatar" Text="Zmień avatar"></Button>
                 <Label x:Name="output"></Label>
             </StackLayout>
-           
-          
-        
+        </ScrollView>
+
+
     </ContentPage.Content>
 </ContentPage>

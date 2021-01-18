@@ -9,10 +9,11 @@
                 <Entry  Placeholder="Tytul" x:Name ="titleEntry"  PlaceholderColor="#bababa" FontSize="16"/>
                 <Editor  Placeholder="Opis" x:Name ="descriptionEntry" MinimumHeightRequest="30" MaxLength="10" Text="" PlaceholderColor="#bababa"/>
                 <Picker ItemDisplayBinding="{Binding CategoryName}" Title="Wybierz kategorie" ItemsSource="{Binding Categories}" x:Name="CategoryBinder"></Picker>
+                <Picker ItemDisplayBinding="{Binding .}" Title="Wybierz stan" ItemsSource="{Binding OfferStates}" x:Name="StateBinder"></Picker>
                 <Entry  Placeholder="Podaj ilosc" x:Name ="quantityEntry"  PlaceholderColor="#bababa" FontSize="16"/>
                 <Entry  Placeholder="Cena (za sztuke)" x:Name ="priceEntry"  PlaceholderColor="#bababa" FontSize="16"/>
                 <Button Text="Dodaj oferte" x:Name ="signIn" Background="#FFB24A" Clicked="addOffer_Clicked" CornerRadius="5"  VerticalOptions="Start"   />
-
+                
                 <Button Text="Dodaj zdjęcia" Command="{Binding addPhotos}" Clicked="Button1_Clicked" />
                 <Button Text="Zrób zdjęcie" Clicked="Button2_Clicked" />
 

@@ -24,7 +24,7 @@ namespace ZakupowoMobile.Views.UserPanel
 
         async void Button_Clicked(System.Object sender, System.EventArgs e)
         {
-
+            UserPanelViewModel.uploadedFile = null;
             var pickResult = await FilePicker.PickAsync(new PickOptions
             {
                 FileTypes = FilePickerFileType.Images,
@@ -49,6 +49,7 @@ namespace ZakupowoMobile.Views.UserPanel
                 {
                     output.TextColor = Color.Green;
                     output.Text = "Pomyślnie zmieniono avatar";
+
                 }
                 else
                 {

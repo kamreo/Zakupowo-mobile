@@ -13,9 +13,11 @@ namespace ZakupowoMobile.Views.Offer
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class OfferItemPage : ContentPage
     {
+        OfferItem offer;
         public OfferItemPage(OfferItem Offer)
         {
             InitializeComponent();
+            this.offer = Offer;
             BindingContext = Offer;
             var images = new List<string>();
             var ItemImages = Offer.OfferPictures;
@@ -31,7 +33,19 @@ namespace ZakupowoMobile.Views.Offer
 
         private async void BuyItemClicked(object sender, EventArgs e)
         {
-          
+            string offerId = offer.OfferID.ToString();
+            string quantity = "1";
+
+            Dictionary<string, string> data = new Dictionary<string, string>
+            {
+                { "login", Session.user.Login },
+                { "offerId", offerId },
+                { "quantity", quantity }
+            };
+
+            string response = await Bucket.AddOfferToBucket(data);
+           
+
         }
     }
 }

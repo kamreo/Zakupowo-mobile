@@ -4,6 +4,20 @@
              x:Class="ZakupowoMobile.Views.Offer.BucketPage">
     <ContentPage.Content>
         <StackLayout>
+            <StackLayout>
+                <StackLayout Grid.Row="1" Orientation="Horizontal" Spacing="0">
+                    <Label
+                    Text="Calkowity koszt"
+                    FontSize="Medium"/>
+
+                    <Label x:Name="totalPrice" 
+                    Text=""
+                    FontSize="Medium"
+                    />
+                </StackLayout>
+          
+                <Button Text="Kup produkty z koszyka" Clicked="BuyBucketItems"></Button>
+            </StackLayout>
             <ListView ItemsSource="{Binding BucketItems}" HasUnevenRows="true" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -14,15 +28,15 @@
                                     <RowDefinition Height="40"></RowDefinition>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="0"></ColumnDefinition>
-                                    <ColumnDefinition Width="50"></ColumnDefinition>
+                                    <ColumnDefinition Width="100"></ColumnDefinition>
+                                    <ColumnDefinition Width="200"></ColumnDefinition>
                                     <ColumnDefinition Width="auto"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
                                 <!-- Image takes to rows so rowspan = 2-->
-                                <Image Grid.Column="1" Grid.Row="1"  Source="{Binding Offer.OfferPictures[0].PathToFile}" ></Image>
-                                <Label Grid.Column="2"></Label>
-                                <Label Grid.Column="3" Grid.Row="1" VerticalOptions="CenterAndExpand" Text="{Binding Offer.Title}" FontSize="30" FontAttributes="Bold"></Label>
-
+                                <Image Grid.Column="0" Grid.Row="0"  Source="{Binding Offer.OfferPictures[0].PathToFile}" ></Image>
+                             
+                                <Label Grid.Column="1" Grid.Row="0" VerticalOptions="CenterAndExpand" Text="{Binding Offer.Title}" FontSize="30" FontAttributes="Bold"></Label>
+                                <Button Text="Usun" Grid.Column="2" CommandParameter="{Binding .}"></Button>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

@@ -86,10 +86,10 @@ namespace ZakupowoMobile.Views.Offer
             int categoryId = Convert.ToInt32(((Category)CategoryBinder.SelectedItem).CategoryID);
             int quantity = Convert.ToInt32(quantityEntry.Text);
             string price = priceEntry.Text;
+            OfferState state = (OfferState)StateBinder.SelectedItem;
 
 
-
-             var offerItem = new Models.BindingModels.OfferBindingModel
+            var offerItem = new Models.BindingModels.OfferBindingModel
             {
                 Title = title,
                 Description = description,
@@ -97,6 +97,7 @@ namespace ZakupowoMobile.Views.Offer
                 InStockOriginaly = quantity,
                 Price = price,
                 UserID = Session.user.UserID,
+                OfferState = state
                 
 
              };
@@ -118,8 +119,7 @@ namespace ZakupowoMobile.Views.Offer
                         output.Text = "Oferta dodana pomyślnie!";
                     }
                     else
-                    {
-
+                    { 
                         
                     }
                 }
