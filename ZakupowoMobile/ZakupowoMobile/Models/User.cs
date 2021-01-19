@@ -36,5 +36,33 @@ namespace ZakupowoMobile.Models
         public string RowVersion { get; set; }
 
 
+        public static async Task<User> GetUserByIdAsync(string id)
+        {
+            await Task.Run(async () =>
+            {
+                using (var client = new HttpClient())
+                {
+                    var uri = Service.URI + "api/Users/" + id;
+                    var result = await client.GetStringAsync(uri);
+                    User user = null;
+                    try
+                    {
+                         user = JsonConvert.DeserializeObject<User>(result);
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+               
+                     return user;
+
+                }
+            });
+            return null;
+        }
     }
+            
+
+
+    
 }

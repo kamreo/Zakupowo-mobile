@@ -14,13 +14,14 @@ namespace ZakupowoMobile.Views.Offer
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BucketPage : ContentPage
     {
+        BucketViewModel viewModel = null;
         public BucketPage()
         {
             InitializeComponent();
 
-            BucketViewModel model = new BucketViewModel();
-            BindingContext = model;
-            totalPrice.Text = model.TotalBucketPrice;
+            this.viewModel = new BucketViewModel();
+            BindingContext = viewModel;
+            totalPrice.Text = viewModel.TotalBucketPrice;
          
         }
 
@@ -34,6 +35,23 @@ namespace ZakupowoMobile.Views.Offer
             };
 
             await BucketViewModel.BuyBucketItems(model);
+            this.viewModel = new BucketViewModel();
+            this.BindingContext = viewModel;
+        }
+
+        private async void deleteItem(object sender, EventArgs e)
+        {
+            Button button = (Button) sender;
+            BucketItem item = (BucketItem)button.CommandParameter;
+            Dictionary<string, string> model = new Dictionary<string, string>()
+            {
+                { "login" , Session.user.Login},
+                { "offerId" , (item.Offer.OfferID).ToString()},
+            };
+
+            string reponse = await BucketViewModel.DeleteBucketItem(model);
+            this.viewModel = new BucketViewModel();
+            this.BindingContext = viewModel;
         }
     }
 }

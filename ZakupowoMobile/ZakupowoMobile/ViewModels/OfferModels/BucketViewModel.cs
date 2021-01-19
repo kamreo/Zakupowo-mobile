@@ -51,6 +51,23 @@ namespace ZakupowoMobile.ViewModels.OfferModels
 
         }
 
+        public static async Task<string> DeleteBucketItem(Dictionary<string, string> model)
+        {
+            string Response = String.Empty;
+            await Task.Run(async () =>
+            {
+                var client = new HttpClient();
+
+                var json = JsonConvert.SerializeObject(model);
+                HttpContent httpContent = new StringContent(json);
+                httpContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+                var response = await client.PostAsync(Service.URI + "api/Bucket/RemoveFromBucket", httpContent); ;
+
+
+            });
+            return Response;
+        }
+
         public static async Task<string> BuyBucketItems(Dictionary<string, string> model)
         {
             string Response = String.Empty;

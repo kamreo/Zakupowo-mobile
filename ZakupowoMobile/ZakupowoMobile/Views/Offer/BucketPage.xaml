@@ -36,7 +36,7 @@
                                 <Image Grid.Column="0" Grid.Row="0"  Source="{Binding Offer.OfferPictures[0].PathToFile}" ></Image>
                              
                                 <Label Grid.Column="1" Grid.Row="0" VerticalOptions="CenterAndExpand" Text="{Binding Offer.Title}" FontSize="30" FontAttributes="Bold"></Label>
-                                <Button Text="Usun" Grid.Column="2" CommandParameter="{Binding .}"></Button>
+                                <Button Text="Usun" Grid.Column="2" Clicked="deleteItem" CommandParameter="{Binding .}"></Button>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

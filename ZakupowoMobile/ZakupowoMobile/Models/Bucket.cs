@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,7 +36,14 @@ namespace ZakupowoMobile.Models
                 HttpContent httpContent = new StringContent(json);
                 httpContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
                 var response = await client.PostAsync(Service.URI + "api/Users/AddOfferToBucket", httpContent); ;
-                Response = JsonConvert.DeserializeObject<string>(response.Content.ReadAsStringAsync().Result);
+                try
+                {
+                    Response = JsonConvert.DeserializeObject<string>(response.Content.ReadAsStringAsync().Result);
+                }catch(Exception e)
+                {
+                    Debug.WriteLine(e.Message);
+                }
+              
 
             });
             return Response;

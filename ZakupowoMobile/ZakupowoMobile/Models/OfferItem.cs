@@ -29,7 +29,7 @@ namespace ZakupowoMobile.Models
 
         public bool IsActive { get; set; }
 
-        public object Stocking { get; set; }
+        public string Stocking { get; set; }
 
         public double InStockOriginaly { get; set; }
 
@@ -37,9 +37,17 @@ namespace ZakupowoMobile.Models
         public double InStockNow { get; set; }
 
         public double Price { get; set; }
-        public int UserID { get; set; }
+        public int UserID{ get; set; }
+
+        public User user { get; set; }
         public int CategoryID { get; set; }
 
+
+        public async void SetUserName()
+        {
+            var userOutput = await User.GetUserByIdAsync(this.UserID.ToString());
+            this.user = userOutput;
+        }
         public List<OfferPicture> OfferPictures { get; set; }
 
         public string PriceInfo 

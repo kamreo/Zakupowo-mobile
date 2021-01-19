@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              x:Class="ZakupowoMobile.Views.Categories.CategoryItemsPage">
     <ContentPage.Content>
        
@@ -11,29 +11,51 @@
 
             </StackLayout>
             <Label HeightRequest="15"></Label>
-            <ListView ItemsSource="{Binding Offers}" HasUnevenRows="true" ItemTapped="OnItemSelected">
-                <ListView.ItemTemplate >
+            <ListView ItemsSource="{Binding Offers}"
+                   HasUnevenRows="true"
+                   SeparatorVisibility="None"
+                   ItemTapped="OnItemSelected">
+                <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid Padding="10" >
+                            <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="40"></RowDefinition>
-                                    <RowDefinition Height="40"></RowDefinition>
-                                 
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="100"></ColumnDefinition>
-                                    <ColumnDefinition Width="200"></ColumnDefinition>
-                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <!-- Image takes to rows so rowspan = 2-->
-                                <Image Grid.Column="0" Grid.Row="0" HeightRequest="60" Source="{Binding MainImage}"></Image>
-                                <Label Grid.Column="1" Grid.Row="0" FontSize="20" Text="{Binding Title}" FontAttributes="Bold"></Label>
-                                <Label Grid.Column="1" Grid.Row="1" Text="{Binding OfferState}" FontAttributes="Bold"></Label>
-                                <Label Grid.Column="2" Grid.Row="0" Text="{Binding PriceInfo}"></Label>
-                                <Label Grid.Column="2" Grid.Row="1" Text="{Binding StockingInfo}"></Label>
+
+                                <controls:CircleImage
+                                
+                                       HeightRequest="60"
+                                        HorizontalOptions="CenterAndExpand"
+                                        VerticalOptions="CenterAndExpand"
+                                        Aspect="AspectFill"
+                                       WidthRequest="66"
+                                       Grid.RowSpan="2"
+                                       Source="{Binding MainImage}"/>
+                                <Label Grid.Column="1" FontAttributes="Bold"
+                                       Text="{Binding Title} " FontSize="15"
+                                       VerticalOptions="End"/>
+                                <Label Grid.Column="1"
+                                       Grid.Row="1"
+                                       VerticalOptions="Start"
+                                       Text="{Binding PriceInfo}"/>
+                                <Label Grid.Column="2"
+                                   
+                                        HorizontalOptions="EndAndExpand"
+                                       Text="{Binding OfferState}"/>
+                                <Label Grid.Column="2"
+                                           Grid.Row="1"
+                                        HorizontalOptions="EndAndExpand"
+                                       Text="{Binding StockingInfo}"/>
                             </Grid>
                         </ViewCell>
+                        <!-- <ViewCell Text="" TextColor="Black"/>-->
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
